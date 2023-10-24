@@ -5,14 +5,14 @@ class Calculator:
 
     def get_user_input(self):
         # Завдання 3: Введення користувача
-        self.num1 = float(input("Введіть перше число: "))
-        self.operator = input("Введіть операцію (+, -, *, /, ^, √, %): ")
-        self.num2 = float(input("Введіть друге число: "))
+        self.num1 = float(input("введіть перше число: "))
+        self.operator = input("введіть операцію (+, -, *, /, ^, √, %): ")
+        self.num2 = float(input("введіть друге число: "))
 
     def check_operator(self):
         # Завдання 4: Перевірка оператора
         if self.operator not in ('+', '-', '*', '/', '^', '√', '%'):
-            print("Помилка: Введено недійсний оператор.")
+            print("помилка: введено недійсний оператор.")
             return False
         return True
 
@@ -27,7 +27,7 @@ class Calculator:
         elif self.operator == '/':
             # Завдання 6: Обробка помилок
             if self.num2 == 0:
-                print("Помилка: Ділення на нуль.")
+                print("помилка: ділення на нуль.")
                 return
             self.result = self.num1 / self.num2
         elif self.operator == '^':
@@ -39,7 +39,7 @@ class Calculator:
 
     def repeat_calculation(self):
         # Завдання 7: Повторення обчислень
-        another = input("Виконати ще одне обчислення? (так/ні): ")
+        another = input("бажаєте виконати ще одне обчислення? (так /ні): ")
         return another.lower() == 'так'
 
     def run(self):
